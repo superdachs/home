@@ -37,6 +37,8 @@ inoremap " ""<Esc>i
 inoremap < <><Esc>i
 nnoremap <silent> sn :lnext<CR>
 
+nnoremap <tab> gt<CR>
+
 let g:jedi#use_tabs_not_buffers = 1
 
 map <C-o> :NERDTreeToggle<CR>
