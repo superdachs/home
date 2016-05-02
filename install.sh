@@ -12,3 +12,4 @@ rm -rf ./tmp_powerlinefonts
 ln -sf ~/.home/.vimrc ~/.vimrc
 ln -sf ~/.home/.gitconfig ~/.gitconfig
 
+vim +PlugInstall +qall
