@@ -9,6 +9,6 @@ chmod +x ./tmp_powerlinefonts/install.sh
 
 rm -rf ./tmp_powerlinefonts
 
-ln -s ~/.home/.vimrc ~/.vimrc
-ln -s ~/.home/.gitconfig ~/.gitconfig
+ln -sf ~/.home/.vimrc ~/.vimrc
+ln -sf ~/.home/.gitconfig ~/.gitconfig
 
