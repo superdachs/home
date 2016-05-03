@@ -66,7 +66,7 @@ call plug#end()
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-
+let g:airline_section_c = airline#section#create(['%{virtualenv#statusline()}'])
 
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -107,5 +107,11 @@ nmap <A-Left> :bprevious<CR>
 nmap <A-Right> :bnext<CR>
 autocmd FileType nerdtree noremap <buffer> <A-Left> <nop>
 autocmd FileType nerdtree noremap <buffer> <A-Right> <nop>
+
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+
+set cmdheight=2
+
 
 
