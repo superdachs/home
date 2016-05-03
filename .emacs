@@ -32,7 +32,7 @@
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(blink-cursor-mode t)
  '(current-language-environment "German")
- '(custom-enabled-themes nil)
+ '(custom-enabled-themes (quote (stefan)))
  '(custom-safe-themes
    (quote
     ("648ae329425c49e83b4552605731ab9f90665d36fc542b7c27799c1edb4117f3" default)))

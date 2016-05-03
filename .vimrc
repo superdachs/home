@@ -37,7 +37,6 @@ inoremap " ""<Esc>i
 inoremap < <><Esc>i
 nnoremap <silent> sn :lnext<CR>
 
-nnoremap <tab> gt<CR>
 
 let g:jedi#use_tabs_not_buffers = 1
 
@@ -97,3 +96,15 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+map <C-n> :NERDTreeToggle <CR>
+
+set hidden
+nmap <A-Left> :bprevious<CR>
+nmap <A-Right> :bnext<CR>
+autocmd FileType nerdtree noremap <buffer> <A-Left> <nop>
+autocmd FileType nerdtree noremap <buffer> <A-Right> <nop>
+
