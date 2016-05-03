@@ -108,3 +108,4 @@ nmap <A-Right> :bnext<CR>
 autocmd FileType nerdtree noremap <buffer> <A-Left> <nop>
 autocmd FileType nerdtree noremap <buffer> <A-Right> <nop>
 
+

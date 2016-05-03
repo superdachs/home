@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mkdir ~/.virtualenvs
+
 mkdir -p ~/devel/django_projects
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
