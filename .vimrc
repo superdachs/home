@@ -122,7 +122,7 @@ let g:tmuxline_preset = {
     \'win'              : ['#I', '#W'],
     \'cwin'             : ['#I', '#W'],
     \'x'                : '',
-    \'y'                : ['♪ #(exec amixer get Master | egrep -o "[0-9]+%" | egrep -o "[0-9]*")'],
+    \'y'                : ['♪ #(exec pamixer --get-volume)'],
     \'z'                : ['#(whoami)@#(hostname)','#(~/.home/get_ip.sh enp2s0)', '%H:%M.%S'],
     \'options' : {'status-justify': 'left'}}
 
