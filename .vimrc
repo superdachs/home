@@ -1,6 +1,7 @@
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+set t_Co=256
 colorscheme murphy
 
 set background=dark
@@ -46,6 +47,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'davidhalter/jedi-vim'
 Plug 'tomasr/molokai'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -60,14 +62,15 @@ Plug 'jmcantrell/vim-virtualenv'
 Plug 'cwood/vim-django'
 Plug 'mattn/calendar-vim'
 Plug 'junegunn/vim-github-dashboard'
+Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
 
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 let g:airline_section_c = airline#section#create(['%{virtualenv#statusline()}'])
-
+let g:airline_theme='dark'
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd BufNew * if winnr('$') == 1 | tabmove99 | endif
@@ -111,7 +114,16 @@ autocmd FileType nerdtree noremap <buffer> <A-Right> <nop>
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 
-set cmdheight=2
+set cmdheight=1
 
-
+let g:tmuxline_preset = {
+    \'a'                : '#{pane_current_path}',
+    \'b disabled'       : '',
+    \'c disabled'       : '',
+    \'win'              : ['#I', '#W'],
+    \'cwin'             : ['#I', '#W'],
+    \'x'                : '',
+    \'y'                : ['♪ #(exec amixer get Master | egrep -o "[0-9]+%" | egrep -o "[0-9]*")'],
+    \'z'                : ['#(whoami)@#(hostname)','#(~/.home/get_ip.sh enp0s25)', '%H:%M.%S'],
+    \'options' : {'status-justify': 'left'}}
 

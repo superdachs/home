@@ -33,4 +33,6 @@ PS1='\[\e[1m\]READY:\[\e[0m\]\n'
 mux() { [[ -z "$TMUX" ]] && { tmux attach -d || tmux -f $HOME/.tmux.conf new -s secured ;} }
 mux
 
+tmux set status-interval 1
+
 . /etc/profile.d/vte.sh
