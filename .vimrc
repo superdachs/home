@@ -2,7 +2,6 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 set t_Co=256
-colorscheme murphy
 
 set background=dark
 syntax on
@@ -124,6 +123,6 @@ let g:tmuxline_preset = {
     \'cwin'             : ['#I', '#W'],
     \'x'                : '',
     \'y'                : ['♪ #(exec amixer get Master | egrep -o "[0-9]+%" | egrep -o "[0-9]*")'],
-    \'z'                : ['#(whoami)@#(hostname)','#(~/.home/get_ip.sh enp0s25)', '%H:%M.%S'],
+    \'z'                : ['#(whoami)@#(hostname)','#(~/.home/get_ip.sh enp2s0)', '%H:%M.%S'],
     \'options' : {'status-justify': 'left'}}
 
