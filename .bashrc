@@ -28,8 +28,8 @@ alias ls='ls --color=auto'
 alias dev='ssh dev'
 alias dep='ssh dep'
 alias LIST='/home/kauerauf/devel/C64/LIST'
-PS1='\[\e[1m\]READY:\[\e[0m\]\n'
-
+#PS1='\[\e[1m\]READY:\[\e[0m\]\n'
+PS1='\e[40;38;5;17m\e[30;48;5;190mREADY\e[40;38;5;190m\e[30;48;5;0m \e[0m'
 mux() { [[ -z "$TMUX" ]] && { tmux attach -d || tmux -f $HOME/.tmux.conf new -s secured ;} }
 mux
 
