@@ -1,1 +1,0 @@
-(define-package "bts" "20151109.533" "A unified UI for various bug tracking systems" '((widget-mvc "0.0.2") (log4e "0.3.0") (yaxception "0.3.3") (dash "2.9.0") (s "1.9.0") (pos-tip "0.4.5")) :url "https://github.com/aki2o/emacs-bts" :keywords '("convenience"))
