@@ -123,6 +123,6 @@ let g:tmuxline_preset = {
     \'cwin'             : ['#I', '#W'],
     \'x'                : '',
     \'y'                : ['♪ #(exec pamixer --get-volume)'],
-    \'z'                : ['#(whoami)@#(hostname)','#(~/.home/get_ip.sh enp2s0)', '%H:%M.%S'],
+    \'z'                : ['#(whoami)@#(hostname)','#(~/.home/get_ip.sh enp0s25)', '%H:%M.%S'],
     \'options' : {'status-justify': 'left'}}
 
