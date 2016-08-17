@@ -29,6 +29,7 @@ alias dev='ssh dev'
 alias dep='ssh dep'
 alias LIST='/home/kauerauf/devel/C64/LIST'
 #PS1='\[\e[1m\]READY:\[\e[0m\]\n'
+shopt -s checkwinsize
 PS1='\[\e[1m\]\e[48;5;124m ☠ READY\e[0m\e[38;5;124m \[\e[0m\]'
 mux() { [[ -z "$TMUX" ]] && { tmux attach -d || tmux -f $HOME/.tmux.conf new -s secured ;} }
 mux
